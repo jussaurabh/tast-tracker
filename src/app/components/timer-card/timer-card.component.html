@@ -1,0 +1,42 @@
+<div class="card">
+  <div class="card-header">
+    <div class="card-title">{{ task?.title }}</div>
+    <div class="card-timer">
+      <div class="timer-clock">{{ time }}</div>
+      <div class="timer-buttons-wrapper">
+        <button
+          class="timer-button"
+          *ngIf="!tracker; else stop"
+          (click)="startTimer()"
+        >
+          Start
+        </button>
+        <ng-template #stop>
+          <button class="timer-button" (click)="stopTimer()">Stop</button>
+        </ng-template>
+        <button
+          class="timer-close-button"
+          (click)="deleteTask()"
+          *ngIf="!tracker"
+        >
+          X
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="card-body-logs" *ngIf="!timeTrackers.length">
+      No history found, click on the start button to track the timer
+    </div>
+    <div class="card-body-header" *ngIf="timeTrackers.length">History</div>
+    <div class="card-body-logs" *ngFor="let item of timeTrackers">
+      Started the timer at {{ item.startTime.toFormat("d/M/yyyy hh:mm:ss") }}
+      {{
+        item.isActive
+          ? "(Active)"
+          : "& Stopped at " + item.endTime?.toFormat("d/M/yyyy hh:mm:ss")
+      }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+.new-task-container {
+  background-color: var(--overlayBackdrop);
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+  top: 0;
+  left: 0;
+}
+
+.new-task-card {
+  background-color: white;
+  border-radius: var(--cardRadius);
+  padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+.input-label {
+  font-size: var(--baseFontSize);
+}
+.input {
+  width: -webkit-fill-available;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px 0 40px 0;
+  font-size: var(--headingFontSize);
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+}

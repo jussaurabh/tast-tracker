@@ -1,0 +1,58 @@
+
+.card {
+  width: 100%;
+  border-radius: var(--cardRadius);
+  box-shadow: var(--cardBoxShadow);
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-title {
+  font-size: var(--headingFontSize);
+}
+.card-timer {
+  border-left: 1px solid gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.timer-clock {
+  font-size: var(--headingFontSize);
+  color: var(--primaryColor);
+  margin: 0 20px;
+}
+
+.timer-buttons-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.timer-close-button {
+  background-color: lightgray;
+  border-radius: 100%;
+  padding: 10px;
+  border: none;
+  height: var(--buttonHeight);
+  width: var(--buttonHeight);
+  margin-left: 20px;
+}
+.card-body {
+  margin-top: 20px;
+}
+.card-body-header {
+  font-size: var(--baseFontSize);
+  font-weight: bold;
+}
+.card-body-logs {
+  color: gray;
+  font-size: var(--baseFontSize);
+  margin-top: 10px;
+}

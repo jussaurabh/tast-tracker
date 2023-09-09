@@ -1,0 +1,20 @@
+<div class="new-task-container">
+  <div class="new-task-card">
+    <div class="input-label">Enter new Task Name</div>
+
+    <input type="text" class="input" [(ngModel)]="title" />
+
+    <div class="button-wrapper">
+      <button class="timer-button" style="margin: 0" (click)="createTask()">
+        Save
+      </button>
+      <button
+        class="timer-button"
+        style="background-color: grey"
+        (click)="closeDialog()"
+      >
+        Cancel
+      </button>
+    </div>
+  </div>
+</div>
